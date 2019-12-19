@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    -ms-overflow-style: none;
 }
 button:focus {outline:0;}
 @font-face {
