@@ -151,6 +151,7 @@ body {
     color: #F0F0F0;
     /* line-height: 182px; */
     overflow: hidden;
+    -ms-overflow-style: none;
     width: 20000px;
     position: absolute;
     bottom: 2.55vw;
