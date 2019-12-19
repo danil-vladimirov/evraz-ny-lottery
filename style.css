@@ -17,6 +17,7 @@ body {
     height: 100vh;
     display: flex;
     animation: appear 2s;
+    -ms-overflow-style: none;
   }
 .wrapper {
     width: 100vw;
