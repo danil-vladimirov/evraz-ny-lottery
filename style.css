@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+button:focus {outline:0;}
 @font-face {
     font-family: 'Humanist531C Black BT';
     src: url('assets/Humanist531CBlackBT.woff2') format('woff2'),
