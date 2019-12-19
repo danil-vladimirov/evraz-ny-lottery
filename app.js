@@ -1,4 +1,8 @@
 
+// let keypress = document.addEventListener('keydown', nextDiv);
+// console.log(keypress);
+
+let image = document.querySelector(".bg-image");
 let first = document.querySelector(".first");
 let second = document.querySelector(".second");
 let last = document.querySelector(".last");
@@ -11,15 +15,18 @@ function nextDiv() {
   first.style.display='none';
   setTimeout(fadeAway, 3100);
   setTimeout(theNumber, 4000);
+  image.classList.add("bg-blur");
 }
 
 function theNumber(){
   console.log(winner);
   second.style.display='none';
-  last.style.display='block';
+  last.style.display='flex';
   number.innerHTML=winner;
 }
 
 function fadeAway(){
   second.classList.add("disappear");
 }
+
+

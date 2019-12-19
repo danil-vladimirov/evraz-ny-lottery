@@ -1,15 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Humanist531C Black BT';
+    src: url('assets/Humanist531CBlackBT.woff2') format('woff2'),
+        url('assets/Humanist531CBlackBT.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
 /* style */
 
 body {
+    height: 100vh;
+    display: flex;
+  }
+.wrapper {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: black; */
 }
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.header {
+    display: flex;
+    /* height: 174px; */
+    background-color: #F0F0F0;
+    width: 100%;
+}
+.logo {
+    width: 385px;
+    padding: 60px 0 60px 60px;
+}
+.bg-image {
+    width: 105%;
+    position: fixed;
+    z-index: -11;
+}
+.bg-blur {
+    width: 105%;
+    filter: blur(24px);
+    -webkit-filter: blur(24px);
+    transition: all 3s;
+}
+.last {
+    align-items: center;
+    flex-direction: column;
+}
+.number {
+    width: 414px;
+    height: 414px;
+    background: linear-gradient(180deg, #B04F00 18.4%, #FF9E00 75.16%);
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);    
+    border-radius: 236px;
+    font-family: 'Humanist531C Black BT';
+    font-size: 152px;
+    color: #FFFBE3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* buttons */
+
+.start {
+    width: 167px;
+    height: 161px;
+    background: linear-gradient(180deg, #B04F00 18.4%, #FF9E00 75.16%);
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);    
+    border-radius: 116px;
+    border: none;
+}
+.star {
+    width: 62px;
+}
+.again {
+    width: 167px;
+    height: 161px;
+    background: rgba(255, 229, 73, 0.25);
+    border: 2px solid #F9B000;
+    border-radius: 116px;
+    /* display: flex; */
+    align-items: center;
+    margin-top: 50px;
 }
 
 /* app */
@@ -26,23 +108,50 @@ body {
         opacity: 1;
     }
 }
+
+/* second */
+
 .second {
     display: none;
-    animation: moving 3s normal forwards ease-in;
-    transition: ease-in 2s all;
+    font-family: 'Humanist531C Black BT';
+    font-size: 152px;
+    color: #FFFBE3;
+    /* line-height: 182px; */
+    overflow: hidden;
+    width: 20000px;
+    position: absolute;
+    bottom: 40px;
 }
-@keyframes moving {
+.second > div {
+    overflow: hidden;
+}
+.second > div:nth-child(odd) {
+    animation: moving-left 4.2s normal forwards ease-in;
+}
+.second > div:nth-child(even) {
+    animation: moving-right 5s normal forwards ease-in;
+}
+@keyframes moving-left {
     from {
         transform: translate(0);
     } to {
-        transform: translate(100px);
+        transform: translate(-1000px);
     }
 }
+@keyframes moving-right {
+    from {
+        transform: translate(0);
+    } to {
+        transform: translate(-1000px);
+    }
+}
+
+/* last */
+
 .last {
     display: none;
 }
 .disappear {
-    transform: translate(100px);
     animation: hide 0.5s normal forwards ease-in;
 }
 @keyframes hide {
