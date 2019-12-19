@@ -2,7 +2,7 @@
 // let keypress = document.addEventListener('keydown', nextDiv);
 // console.log(keypress);
 
-let image = document.querySelector(".bg-image");
+let image = document.querySelector(".bg-image-blur");
 let first = document.querySelector(".first");
 let second = document.querySelector(".second");
 let last = document.querySelector(".last");

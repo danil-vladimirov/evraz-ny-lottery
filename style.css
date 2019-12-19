@@ -14,6 +14,7 @@
 body {
     height: 100vh;
     display: flex;
+    animation: appear 2s;
   }
 .wrapper {
     width: 100vw;
@@ -40,15 +41,17 @@ body {
     padding: 60px 0 60px 60px;
 }
 .bg-image {
-    width: 105%;
     position: fixed;
     z-index: -11;
 }
+.bg-image-blur {
+    position: fixed;
+    z-index: -10;
+    display: none;
+}
 .bg-blur {
-    width: 105%;
-    filter: blur(24px);
-    -webkit-filter: blur(24px);
-    transition: all 3s;
+    display: block;
+    animation: appear 3s;
 }
 .last {
     align-items: center;
@@ -79,6 +82,33 @@ body {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);    
     border-radius: 116px;
     border: none;
+    animation: burn 1000ms ease-out infinite;
+}
+@keyframes flare {
+    100% {
+      transform: translateY(-20px) scale(3.5);
+      filter: blur(10px);
+      opacity: 0;
+    }
+  }
+@keyframes burn {
+    0% {
+        color: rgba(255, 130, 110, 1);
+        background: rgba(255, 255, 255, 1);
+        box-shadow:
+        0 0 5px 0 rgba(241, 136, 0, 1),
+        0 0 5px 0 rgba(241, 136, 0, 0.8),
+        0 0 5px 0 rgba(230, 230, 10, 0.6);
+    }
+
+    100% {
+        color: rgba(0, 0, 0, 1);
+        background: rgba(255, 255, 255, 1);
+        box-shadow:
+        0 -35px 40px 30px rgba(255, 130, 10, 0),
+        0 -30px 30px 10px rgba(241, 136, 0, 0.8),
+        0 -20px 10px 0 rgba(255, 255, 10, 0);
+    }
 }
 .star {
     width: 62px;
@@ -99,7 +129,7 @@ body {
 .first {
     display: block;
     transition: ease-in 2s all;
-    animation: appear 3s;
+    animation: appear 1s;
 }
 @keyframes appear {
     from {
@@ -114,13 +144,14 @@ body {
 .second {
     display: none;
     font-family: 'Humanist531C Black BT';
-    font-size: 152px;
-    color: #FFFBE3;
+    font-size: 8.1vw;
+    color: #F0F0F0;
     /* line-height: 182px; */
     overflow: hidden;
     width: 20000px;
     position: absolute;
-    bottom: 40px;
+    bottom: 1.95vw;
+    animation: appear 1s;
 }
 .second > div {
     overflow: hidden;
@@ -150,6 +181,7 @@ body {
 
 .last {
     display: none;
+    animation: appear 1s;
 }
 .disappear {
     animation: hide 0.5s normal forwards ease-in;
