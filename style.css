@@ -1,0 +1,54 @@
+/* style */
+
+body {
+    width: 100vw;
+    height: 100%;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* app */
+
+.first {
+    display: block;
+    transition: ease-in 2s all;
+    animation: appear 3s;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+.second {
+    display: none;
+    animation: moving 3s normal forwards ease-in;
+    transition: ease-in 2s all;
+}
+@keyframes moving {
+    from {
+        transform: translate(0);
+    } to {
+        transform: translate(100px);
+    }
+}
+.last {
+    display: none;
+}
+.disappear {
+    transform: translate(100px);
+    animation: hide 0.5s normal forwards ease-in;
+}
+@keyframes hide {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
