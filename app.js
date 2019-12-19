@@ -1,7 +1,4 @@
-
-// let keypress = document.addEventListener('keydown', nextDiv);
-// console.log(keypress);
-
+let fly = document.querySelector(".stars");
 let image = document.querySelector(".bg-image-blur");
 let first = document.querySelector(".first");
 let second = document.querySelector(".second");
@@ -23,10 +20,14 @@ function theNumber(){
   second.style.display='none';
   last.style.display='flex';
   number.innerHTML=winner;
+  setTimeout(stars, 500);
 }
 
 function fadeAway(){
   second.classList.add("disappear");
 }
 
+function stars() {
+  fly.classList.add("stars-show");
+}
 

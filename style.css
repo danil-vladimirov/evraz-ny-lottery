@@ -38,8 +38,8 @@ body {
     width: 100%;
 }
 .logo {
-    width: 385px;
-    padding: 60px 0 60px 60px;
+    width: 200px;
+    padding: 20px 0 20px 20px;
 }
 .bg-image {
     position: fixed;
@@ -59,8 +59,8 @@ body {
     flex-direction: column;
 }
 .number {
-    width: 414px;
-    height: 414px;
+    width: 354px;
+    height: 354px;
     background: linear-gradient(180deg, #B04F00 18.4%, #FF9E00 75.16%);
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);    
     border-radius: 236px;
@@ -122,7 +122,7 @@ body {
     border-radius: 116px;
     /* display: flex; */
     align-items: center;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 /* app */
@@ -145,13 +145,13 @@ body {
 .second {
     display: none;
     font-family: 'Humanist531C Black BT';
-    font-size: 8.1vw;
+    font-size: 9.1vw;
     color: #F0F0F0;
     /* line-height: 182px; */
     overflow: hidden;
     width: 20000px;
     position: absolute;
-    bottom: 1.95vw;
+    bottom: 2.55vw;
     animation: appear 1s;
 }
 .second > div {
@@ -183,6 +183,7 @@ body {
 .last {
     display: none;
     animation: appear 1s;
+    padding-top: 70px;
 }
 .disappear {
     animation: hide 0.5s normal forwards ease-in;
@@ -192,5 +193,22 @@ body {
         opacity: 1;
     } to {
         opacity: 0;
+    }
+}
+.stars {
+    position: absolute;
+    z-index: -1;
+}
+.stars img {
+    width: 285px;
+}
+.stars-show {
+    animation: success 1s normal forwards cubic-bezier(0.86, 0, 0.07, 1);
+}
+@keyframes success {
+    from {
+        transform: translateY(0);
+    } to {
+        transform: translateY(-120px);
     }
 }
