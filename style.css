@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     -ms-overflow-style: none;
+    cursor: url(cursor.png), auto;
 }
 button:focus {outline:0;}
 @font-face {
